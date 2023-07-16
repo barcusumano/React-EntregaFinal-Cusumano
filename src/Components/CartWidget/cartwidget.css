@@ -1,0 +1,14 @@
+.cartPosition {
+    height: 20px;
+    margin-top: 5px;
+}
+
+Badge {
+    border-radius: 10px;
+}
+
+.size1 {
+    margin-top: 0px;
+    margin-left: -1px;
+    font-size: x-small;
+}

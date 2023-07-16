@@ -1,0 +1,17 @@
+.title {
+    display: flex;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: lightgray;
+    font-size: large;
+    margin: 15px;
+}
+
+.subtitle {
+    display: flex;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: lightgray;
+    font-size: large;
+    margin: 15px;
+}

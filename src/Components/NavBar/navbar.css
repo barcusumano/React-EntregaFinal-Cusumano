@@ -1,0 +1,17 @@
+.pagetitle {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(95, 49, 95);
+    text-decoration: none;
+}
+
+.navlink {
+    text-decoration: none;
+    color: grey;
+    margin-right: 15px;
+    margin-top: 7px;
+}
+
+.navlinkcontainer {
+    display: flex;
+    justify-content: space-between;
+}

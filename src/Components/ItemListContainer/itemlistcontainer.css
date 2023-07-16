@@ -1,0 +1,11 @@
+.cardlist {
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    justify-items: auto;
+    
+}
+
+.carditem {
+    margin-top: 20px;
+}

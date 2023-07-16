@@ -1,0 +1,15 @@
+.formdiv {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-items: auto;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: lightgray;
+    font-size: large;
+    margin: 15px;
+}
