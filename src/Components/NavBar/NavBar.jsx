@@ -8,7 +8,7 @@ import './navbar.css';
 import CartWidget from '../CartWidget/CartWidget';
 
 
-const NavBar = () => {
+const NavBar = ({ cartItems }) => {
   return (
       <Navbar bg="light" expand="lg">
         <Container>
@@ -25,7 +25,7 @@ const NavBar = () => {
               </NavDropdown.Item>
             </NavDropdown>
             <Link to= "/shoppingPage">
-              <CartWidget />
+              <CartWidget cartItems={cartItems} />
             </Link>
           </Nav>
           </Navbar.Collapse>

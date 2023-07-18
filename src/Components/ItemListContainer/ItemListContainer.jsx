@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import './itemlistcontainer.css';
 import CardDetail from '../CardDetail/CardDetail';
 
@@ -28,7 +28,7 @@ const ItemListContainer = () => {
         //console.log(doc.id, " => ", doc.data());
         docs.push ({ ...doc.data(), id: doc.id});
       });
-      console.log(docs);
+      // console.log(docs);
       setFunkos(docs);
     }
     getFunkos ();
@@ -41,7 +41,7 @@ const ItemListContainer = () => {
           return (
             <div className='carditem'  key={funko.id}>
               <Link to={`/detailpage/${funko.id}`}>
-              <CardDetail funko={funko}/>
+                <CardDetail funko={funko} />
               </Link>
             </div>
           )

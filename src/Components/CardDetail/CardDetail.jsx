@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { AppContext } from "../../data";
 
 const CardDetail = ({funko}) => {
+  const { addToCart } = useContext(AppContext)
+  const addToCardLocal = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    addToCart(funko)
+  }
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={funko.img} />
@@ -11,7 +18,7 @@ const CardDetail = ({funko}) => {
         <Card.Text>
           {funko.franchise} | €{funko.price} 
         </Card.Text>
-       <Button variant="primary">Go somewhere</Button>
+       <Button variant="primary" onClick={addToCardLocal}>Add to cart</Button>
       </Card.Body>
     </Card>
   );

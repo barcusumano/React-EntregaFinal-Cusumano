@@ -7,7 +7,7 @@ const Catalog = () => {
     <>
     <div className='title'>Catalog</div>
     <div>
-      <ItemListContainer/>
+      <ItemListContainer />
     </div>
     </>
   )

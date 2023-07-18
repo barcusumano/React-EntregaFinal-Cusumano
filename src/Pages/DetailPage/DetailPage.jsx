@@ -44,6 +44,7 @@ const DetailPage = () => {
           return (
             <div className='carditem'  key={funko.id}> 
               <CardDetail funko={funko}/>
+              
             </div>
           )
         })}

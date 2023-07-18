@@ -21,23 +21,63 @@ import Pokemon from './Pages/Pokemon/Pokemon';
 import ShoppingPage from './Pages/ShoppingPage/shoppingPage';
 
 
+//Context
+import { AppContext } from './data';
+
 function App() {
+  const [cartItems, setItemsCart] = useState([])
+
+  const addToCart = (funko) => {
+    setItemsCart(items => {
+      const index = items.findIndex(item => item.funko.id === funko.id);
+
+      if (index < 0) {
+        return [
+          ...items,
+          {
+            funko,
+            quantity: 1
+          }
+        ]
+      } else {
+        items[index].quantity += 1;
+        return [...items];
+      }
+    })
+  }
+
+  const removeItem = (funko) => {
+    setItemsCart(items => {
+      const clean =  items.filter(item => item.funko.id !== funko.id)
+      return clean
+    })
+  }
+
+  const emptyCart = () => {
+    setItemsCart ([])
+  }
+
+
+ 
+  const contextValue = { cartItems, addToCart, removeItem, emptyCart };
 
   return (
     <>
       <Router>
-        <div>
-          <NavBar />
-        </div>
-        <Routes>
-          <Route path="/" element={<HomePage/>}/>
-          <Route path="/catalog" element={<Catalog/>}/>
-          <Route path="/WizardingWorld" element={<WizardingWorld/>}/>
-          <Route path="/Pokemon" element={<Pokemon/>}/>
-          <Route path="/categories/:franchise" element={<Categories/>}/>
-          <Route path="/detailpage/:id" element={<DetailPage/>}/>
-          <Route path="/ShoppingPage" element={<ShoppingPage/>}/>
-        </Routes>
+        <AppContext.Provider value={contextValue}>
+          <div>
+            <NavBar cartItems={cartItems} />
+          </div>
+          <Routes>
+            <Route path="/" element={<HomePage/>}/>
+            <Route path="/catalog" element={<Catalog />}/>
+            <Route path="/WizardingWorld" element={<WizardingWorld/>}/>
+            <Route path="/Pokemon" element={<Pokemon/>}/>
+            <Route path="/categories/:franchise" element={<Categories/>}/>
+            <Route path="/detailpage/:id" element={<DetailPage/>}/>
+            <Route path="/ShoppingPage" element={<ShoppingPage />}/>
+          </Routes>
+        </AppContext.Provider>
       </Router>
     </>
   )
