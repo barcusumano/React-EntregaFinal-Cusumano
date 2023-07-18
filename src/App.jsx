@@ -59,7 +59,7 @@ function App() {
 
 
  
-  const contextValue = { cartItems, addToCart, removeItem, emptyCart };
+  const contextValue = { cartItems, addToCart, removeItem, emptyCart, setItemsCart };
 
   return (
     <>

@@ -19,10 +19,39 @@ const initialState = {
 };
 
 const ShoppingPage = () => {
-    const {cartItems , removeItem, emptyCart} = useContext(AppContext)
+    const {cartItems , setItemsCart, removeItem, emptyCart} = useContext(AppContext)
     const [values, setValues] = useState(initialState);
     const [state, setState] = useState('pending');
     const [confirmationId, setConfirmationId] = useState(null);
+
+    const decreaseQuantity = (funko) => {
+        setItemsCart((prevCartItems) =>
+          prevCartItems.map((item) => {
+            if (item.funko.id === funko.id) {
+              if (item.quantity === 1) {
+                removeItem(funko);
+                return null;
+              } else {
+                return { ...item, quantity: item.quantity - 1 };
+              }
+            }
+            return item;
+          }).filter(Boolean)
+        );
+      };
+      
+      
+      const increaseQuantity = (funko) => {
+        setItemsCart((prevCartItems) =>
+          prevCartItems.map((item) => {
+            if (item.funko.id === funko.id) {
+              return { ...item, quantity: item.quantity + 1 };
+            }
+            return item;
+          })
+        );
+      };
+      
 
     const handleOnChange = (e) => {
         const {value, name} = e.target;
@@ -120,7 +149,7 @@ const ShoppingPage = () => {
                                     <td>{item.funko.name}</td>
                                     <td>{item.funko.franchise}</td>
                                     <td>€{item.funko.price}</td>
-                                    <td><button> - </button>{item.quantity}<button> + </button></td>
+                                    <td><button onClick={() => decreaseQuantity(item.funko)}> - </button>{item.quantity}<button onClick={() => increaseQuantity(item.funko)}> + </button></td>
                                     <td>{item.quantity * item.funko.price}</td>
                                     <td>
                                         <button onClick={() => removeItem(item.funko)}>x</button>
