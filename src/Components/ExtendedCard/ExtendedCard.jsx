@@ -1,15 +1,23 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { AppContext } from "../../data";
 
 const ExtendedDetail = ({funko}) => {
-  const { addToCart } = useContext(AppContext)
+  const { addToCart } = useContext(AppContext);
+  const [isButtonDisabled, setButtonDisabled] = useState(false);
+
   const addToCardLocal = (e) => {
     e.stopPropagation();
     e.preventDefault();
-    addToCart(funko)
-  }
+    
+    if (!isButtonDisabled) {
+      addToCart(funko);
+      setButtonDisabled(true);
+      setTimeout(() => setButtonDisabled(false), 1000);
+    }
+  };
+
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={funko.img} />
@@ -21,11 +29,12 @@ const ExtendedDetail = ({funko}) => {
         <Card.Text>
           {funko.description}
         </Card.Text>
-       <Button variant="dark" onClick={addToCardLocal}>Add to cart</Button>
+        <Button variant="dark" onClick={addToCardLocal} disabled={isButtonDisabled}>
+          {isButtonDisabled ? "Adding..." : "Add to cart"}
+        </Button>
       </Card.Body>
     </Card>
   );
 }
-
 
 export default ExtendedDetail;

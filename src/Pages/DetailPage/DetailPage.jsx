@@ -24,10 +24,7 @@ const DetailPage = () => {
       
       const docs = [];
       const querySnapshot = await getDocs (q);
-      //console.log(querySnapshot);
       querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        //console.log(doc.id, " => ", doc.data());
         docs.push ({ ...doc.data(), id: doc.id});
       });
       console.log(docs);
