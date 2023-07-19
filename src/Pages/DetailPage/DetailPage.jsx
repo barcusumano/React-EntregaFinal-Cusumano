@@ -1,9 +1,9 @@
 import {useState, useEffect} from 'react'
 //import axios from "axios";
-import './detailpage.css';
+import './detailpage.css'
 
 //Components
-import CardDetail from '../../Components/CardDetail/CardDetail';
+import ExtendedDetail from '../../Components/ExtendedCard/ExtendedCard';
 
 //useParams
 import { useParams } from 'react-router-dom';
@@ -43,8 +43,7 @@ const DetailPage = () => {
         {funko.map((funko) => {
           return (
             <div className='carditem'  key={funko.id}> 
-              <CardDetail funko={funko}/>
-              
+              <ExtendedDetail funko={funko}/>
             </div>
           )
         })}
