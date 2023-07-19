@@ -1,8 +1,9 @@
 import React from 'react'
+import './wizard.css';
 
 const WizardingWorld = () => {
   return (
-    <div className='title'>Wizarding World</div>
+    <h1 className='title'>Wizarding World</h1>
   )
 }
 

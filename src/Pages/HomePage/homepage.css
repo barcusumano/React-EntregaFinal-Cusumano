@@ -2,16 +2,10 @@
     display: flex;
     justify-content: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: lightgray;
-    font-size: large;
-    margin: 15px;
+    color: rgb(54, 54, 54);
+    font-size: xx-large;
 }
 
-.subtitle {
-    display: flex;
-    justify-content: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: lightgray;
-    font-size: large;
-    margin: 15px;
+.header {
+    height: 40px;
 }

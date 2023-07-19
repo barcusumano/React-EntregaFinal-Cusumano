@@ -8,7 +8,7 @@ import { collection, query, getDocs , where , documentId } from "firebase/firest
 //useParams
 import { Link, useParams } from 'react-router-dom';
 
-import './categories.css'
+import './categories.css';
 import CardDetail from '../../Components/CardDetail/CardDetail';
 
 const Categories = () => {
@@ -22,10 +22,8 @@ const Categories = () => {
       
       const docs = [];
       const querySnapshot = await getDocs (q);
-      //console.log(querySnapshot);
       querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        //console.log(doc.id, " => ", doc.data());
+
         docs.push ({ ...doc.data(), id: doc.id});
       });
       console.log(docs);
@@ -39,11 +37,12 @@ const Categories = () => {
   
    return (
     <>
-      <div className='cardlist'>
+      <h1 className='title'>{franchise}</h1>
+        <div className='cardlist'>
           {funko.map((funko) => {
             return (
                 <div className='carditem'  key={funko.id}>
-                  <Link to={`/detailpage/${funko.id}`}>
+                  <Link className='nodeco' to={`/detailpage/${funko.id}`}>
                   <CardDetail funko={funko}/>
                   </Link>
                 </div>

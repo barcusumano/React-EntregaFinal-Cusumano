@@ -1,15 +1,45 @@
-.formdiv {
+.grandiv {
     display: flex;
+    justify-content:center;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+
+.formdiv {
     justify-content: center;
     flex-wrap: wrap;
     justify-items: auto;
+    margin: 30px;
+    
 }
+
+.tablediv {
+    margin: 30px;
+
+}
+
 
 .title {
     display: flex;
+    font-size: 10px;
     justify-content: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: lightgray;
-    font-size: large;
+    color: rgb(29, 29, 29);
     margin: 15px;
+}
+
+.confirmation {
+    display: block;
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(83, 82, 82);
+    margin: 15px;
+}
+
+Button {
+    margin: 5px; 
+
 }

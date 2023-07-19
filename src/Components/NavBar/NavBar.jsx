@@ -10,9 +10,9 @@ import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = ({ cartItems }) => {
   return (
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="dark" data-bs-theme="dark" expand="lg">
         <Container>
-          <Link className="pagetitle" to="/">MyApp</Link>
+          <Link className="pagetitle" to="/">FunkoStore</Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto navlinkcontainer">

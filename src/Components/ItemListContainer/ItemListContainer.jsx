@@ -40,7 +40,7 @@ const ItemListContainer = () => {
         {funkos.map((funko) => {
           return (
             <div className='carditem'  key={funko.id}>
-              <Link to={`/detailpage/${funko.id}`}>
+              <Link className='nodeco' to={`/detailpage/${funko.id}`}>
                 <CardDetail funko={funko} />
               </Link>
             </div>

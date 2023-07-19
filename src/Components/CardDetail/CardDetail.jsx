@@ -14,11 +14,11 @@ const CardDetail = ({funko}) => {
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={funko.img} />
       <Card.Body>
-        <Card.Title>{funko.name}</Card.Title>
-        <Card.Text>
+        <Card.Title className="nodeco">{funko.name}</Card.Title>
+        <Card.Text className="nodeco">
           {funko.franchise} | €{funko.price} 
         </Card.Text>
-       <Button variant="primary" onClick={addToCardLocal}>Add to cart</Button>
+       <Button variant="dark" onClick={addToCardLocal}>Add to cart</Button>
       </Card.Body>
     </Card>
   );

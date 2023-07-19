@@ -2,7 +2,11 @@
     display: flex;
     justify-content: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: lightgray;
+    color: rgb(143, 141, 141);
     font-size: large;
-    margin: 15px;
+    margin: 0px;
+}
+
+.nodeco {
+    text-decoration: none;
 }

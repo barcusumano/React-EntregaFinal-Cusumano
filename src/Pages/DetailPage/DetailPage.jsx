@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 //import axios from "axios";
-import './detailpage.css'
+import './detailpage.css';
 
 //Components
 import CardDetail from '../../Components/CardDetail/CardDetail';
