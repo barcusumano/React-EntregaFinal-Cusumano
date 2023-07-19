@@ -10,28 +10,33 @@ import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = ({ cartItems }) => {
   return (
-      <Navbar bg="dark" data-bs-theme="dark" expand="lg">
-        <Container>
-          <Link className="pagetitle" to="/">FunkoStore</Link>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+    <Navbar bg="dark" data-bs-theme="dark" expand="lg">
+      <Container>
+        <Link className="pagetitle" to="/">
+          FunkoStore
+        </Link>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto navlinkcontainer">
-            <Link className="navlink" to="/catalog">Catalog</Link>
+            <Link className="navlink" to="/catalog">
+              Catalog
+            </Link>
             <NavDropdown title="Categories" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/categories/WizardingWorld">
-                Wizarding World</NavDropdown.Item>
-              <NavDropdown.Item href="/categories/Pokemon">
+              <NavDropdown.Item as={Link} to="/categories/WizardingWorld">
+                Wizarding World
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/categories/Pokemon">
                 Pokemon
               </NavDropdown.Item>
             </NavDropdown>
-            <Link to= "/shoppingPage">
+            <Link to="/shoppingPage">
               <CartWidget cartItems={cartItems} />
             </Link>
           </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-  )
-}
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+};
 
 export default NavBar

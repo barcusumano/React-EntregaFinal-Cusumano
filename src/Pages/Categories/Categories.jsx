@@ -4,7 +4,7 @@ import './categories.css';
 //Firebase
 
 import { db } from "../../firebase/firebaseConfig";
-import { collection, query, getDocs , where , documentId } from "firebase/firestore";
+import { collection, query, getDocs , where } from "firebase/firestore";
 
 //useParams
 import { Link, useParams } from 'react-router-dom';
@@ -33,8 +33,6 @@ const Categories = () => {
     getFunkos ();
     
   }, [franchise]);
-
-  
   
    return (
     <>

@@ -19,7 +19,7 @@ import Categories from './Pages/Categories/Categories';
 import WizardingWorld from './Pages/WizardingWorld/wizardingWorld';
 import Pokemon from './Pages/Pokemon/Pokemon';
 import ShoppingPage from './Pages/ShoppingPage/shoppingPage';
-import ExtendedDetail from './Components/ExtendedCard/ExtendedCard';
+
 
 
 //Context
@@ -58,8 +58,6 @@ function App() {
     setItemsCart ([])
   }
 
-
- 
   const contextValue = { cartItems, addToCart, removeItem, emptyCart, setItemsCart };
 
   return (
