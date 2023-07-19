@@ -16,7 +16,7 @@ import HomePage from "./Pages/HomePage/HomePage"
 import Catalog from "./Pages/Catalog/Catalog"
 import DetailPage from './Pages/DetailPage/DetailPage';
 import Categories from './Pages/Categories/Categories';
-import WizardingWorld from './Pages/WizardingWorld/WizardingWorld';
+import WizardingWorld from './Pages/WizardingWorld/wizardingWorld';
 import Pokemon from './Pages/Pokemon/Pokemon';
 import ShoppingPage from './Pages/ShoppingPage/shoppingPage';
 

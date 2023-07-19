@@ -84,7 +84,7 @@ const ShoppingPage = () => {
 
     return (
         <div>
-            <div className="title">
+            <div className="title4">
                 <h1>
                     Shopping Cart
                 </h1>

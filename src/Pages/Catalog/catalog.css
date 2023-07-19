@@ -1,8 +1,8 @@
-.title {
+.title1 {
     display: flex;
     justify-content: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgb(54, 54, 54);
     font-size: xx-large;
-    
+    margin: 10px;
 }

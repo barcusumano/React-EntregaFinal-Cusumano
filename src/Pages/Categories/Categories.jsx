@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import './categories.css';
 
 //Firebase
 
@@ -37,7 +38,7 @@ const Categories = () => {
   
    return (
     <>
-      <h1 className='title'>{franchise}</h1>
+      <h1 className='title2'>{franchise}</h1>
         <div className='cardlist'>
           {funko.map((funko) => {
             return (

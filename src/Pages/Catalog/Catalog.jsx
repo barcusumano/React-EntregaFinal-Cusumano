@@ -5,7 +5,7 @@ import './catalog.css';
 const Catalog = () => {
   return (
     <>
-      <h1 className='title'>Catalog</h1>
+      <h1 className='title1'>Catalog</h1>
       <div>
       <ItemListContainer />
       </div>

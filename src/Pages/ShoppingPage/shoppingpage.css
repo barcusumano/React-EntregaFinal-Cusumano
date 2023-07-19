@@ -20,14 +20,15 @@
 }
 
 
-.title {
+.title4 {
     display: flex;
-    font-size: 10px;
     justify-content: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgb(29, 29, 29);
-    margin: 15px;
+    color: rgb(54, 54, 54);
+    font-size: large;
+    margin: 10px;
 }
+
 
 .confirmation {
     display: block;

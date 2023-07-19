@@ -8,7 +8,7 @@ const HomePage = () => {
     <>
       <div>
           <div className='header'>
-            <h1 className='title'>HomePage</h1>
+            <h1 className='title3'>HomePage</h1>
           </div>
           <div>
             
